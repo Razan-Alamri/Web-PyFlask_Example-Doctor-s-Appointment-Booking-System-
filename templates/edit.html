@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Booking</title>
+  </head>
+  <body>
+    <h1>Edit Booking</h1>
+    <form method="post" action="{{ url_for('edit', id=row[0]) }}">
+      <label>Name:</label>
+      <input type="text" name="name" value="{{ row[1] }}" required>
+      <br>
+      <label>Doctor:</label>
+      <input type="text" name="doctor" value="{{ row[2] }}" required>
+      <br>
+      <label>Date:</label>
+      <input type="date" name="date" value="{{ row[3] }}" required>
+      <br>
+      <label>Time:</label>
+      <input type="time" name="time" value="{{ row[4] }}" required>
+      <br>
+      <input type="submit" value="Save">
+    </form>
+    <p><a href="{{ url_for('admin_index') }}">Cancel</a></p>
+  </body>
+</html>

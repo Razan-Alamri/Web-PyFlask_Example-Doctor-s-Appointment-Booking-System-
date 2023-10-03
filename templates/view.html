@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}View Appointments{% endblock %}
+
+{% block content %}
+    <h1>Appointments</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
